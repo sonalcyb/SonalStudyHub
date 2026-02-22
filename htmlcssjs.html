@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Notes - Sonal Study Hub</title>
+
+<style>
+:root{
+  --bg:#0b1120;
+  --card:#111827;
+  --text:#e5e7eb;
+  --accent:#3b82f6;
+  --glass: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.08);
+}
+
+body{
+  margin:0;
+  font-family:"Segoe UI",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 25px;
+  background:var(--glass);
+  border-bottom:1px solid var(--border);
+}
+
+.title{
+  font-size:22px;
+  font-weight:bold;
+  color:#60a5fa;
+}
+
+.back{
+  padding:8px 18px;
+  background:#3b82f6;
+  color:white;
+  text-decoration:none;
+  border-radius:20px;
+  font-weight:600;
+}
+
+/* SUBJECT SECTION */
+.subject-section{
+  max-width:1300px;
+  margin:40px auto;
+  padding:0 20px;
+}
+
+.subject-heading{
+  font-size:26px;
+  margin:30px 0 20px;
+  color:#60a5fa;
+  border-left:5px solid #3b82f6;
+  padding-left:12px;
+}
+
+/* GRID */
+.notes-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
+}
+
+@media(max-width:1000px){
+  .notes-grid{grid-template-columns:repeat(2,1fr);}
+}
+
+@media(max-width:500px){
+  .notes-grid{grid-template-columns:1fr;}
+}
+
+/* CARD */
+.note-card{
+  background:var(--card);
+  border-radius:18px;
+  padding:15px;
+  border:1px solid var(--border);
+  transition:0.3s;
+}
+
+.note-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.note-img{
+  width:100%;
+  height:170px;
+  border-radius:12px;
+  object-fit:cover;
+}
+
+.note-title{
+  margin:12px 0;
+  font-size:16px;
+  font-weight:600;
+  color:#93c5fd;
+}
+
+/* BUTTONS */
+.btn-group{
+  display:flex;
+  gap:10px;
+}
+
+.btn{
+  flex:1;
+  text-align:center;
+  padding:9px;
+  border-radius:20px;
+  text-decoration:none;
+  color:white;
+  font-size:14px;
+  font-weight:600;
+}
+
+.preview{background:#22c55e;}
+.download{background:#3b82f6;}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="title">📚 Sonal Study Hub - Notes</div>
+  <a href="index.html" class="back">⬅ Home</a>
+</div>
+
+<!-- 💻 COMPUTER NOTES -->
+<section class="subject-section">
+  <div class="subject-heading"> HTML Notes</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">Computer Handwritten Notes (Full PDF)</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+    <div class="note-card">
+      <img src="images/notes2.jpg" class="note-img">
+      <div class="note-title">HTML & CSS Handwritten Notes</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ➗ MATHS NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">CSS Notes</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">Engineering Maths Full Unit Notes</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ⚡ BEE NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">JavaScript Notes</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ⚡ BEE NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">⚡ BEE Notes</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- ⚡ BEE NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">⚡ BEE Notes</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- ⚡ BEE NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">⚡ BEE Notes</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- ⚡ BEE NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">Applied Chemistry</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">Applied Chemistry Unit-1</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+</body>
+</html>
