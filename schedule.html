@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Class Schedule - Sonal Notes Hub</title>
+
+<style>
+:root{
+  --bg:#0b1120;
+  --text:#e5e7eb;
+  --accent:#3b82f6;
+  --accent2:#22c55e;
+  --glass: rgba(255,255,255,0.05);
+  --border: rgba(255,255,255,0.08);
+}
+
+body.light{
+  --bg:#f4f7fb;
+  --text:#111827;
+  --glass: rgba(0,0,0,0.04);
+  --border: rgba(0,0,0,0.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:"Segoe UI", sans-serif;
+}
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  transition:0.3s ease;
+}
+
+/* HEADER */
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:16px 25px;
+  background:var(--glass);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--border);
+}
+
+.title{
+  font-size:22px;
+  font-weight:700;
+  color:#60a5fa;
+}
+
+.top-actions{
+  display:flex;
+  gap:10px;
+}
+
+.back{
+  padding:8px 16px;
+  background:var(--accent);
+  color:white;
+  text-decoration:none;
+  border-radius:20px;
+  font-weight:600;
+  font-size:14px;
+}
+
+.toggle{
+  padding:8px 16px;
+  border:none;
+  border-radius:20px;
+  background:linear-gradient(135deg,#3b82f6,#22c55e);
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* HEADING */
+.heading{
+  text-align:center;
+  font-size:30px;
+  margin:30px 10px 10px;
+  color:#60a5fa;
+}
+
+.sub{
+  text-align:center;
+  opacity:0.8;
+  margin-bottom:25px;
+}
+
+/* WRAPPER */
+.wrapper{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+/* SCHEDULE TABLE */
+.table-container{
+  overflow-x:auto;
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:15px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:600px;
+}
+
+th, td{
+  padding:14px;
+  text-align:center;
+  border-bottom:1px solid var(--border);
+}
+
+th{
+  background:rgba(59,130,246,0.15);
+  color:#60a5fa;
+  font-size:16px;
+}
+
+td{
+  font-size:14px;
+}
+
+/* DOWNLOAD CARD */
+.download-card{
+  margin-top:30px;
+  background:var(--glass);
+  border:1px solid var(--border);
+  border-radius:18px;
+  padding:25px;
+  text-align:center;
+}
+
+.download-card h3{
+  color:#60a5fa;
+  margin-bottom:10px;
+}
+
+.download-btn{
+  display:inline-block;
+  margin-top:12px;
+  padding:12px 24px;
+  background:linear-gradient(135deg,#3b82f6,#22c55e);
+  color:white;
+  text-decoration:none;
+  border-radius:25px;
+  font-weight:600;
+  font-size:15px;
+  transition:0.3s;
+}
+
+.download-btn:hover{
+  transform:scale(1.05);
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .heading{font-size:24px;}
+  th, td{padding:10px;font-size:13px;}
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="title">🗓 Class Schedule</div>
+  <div class="top-actions">
+    <a href="index.html" class="back">⬅ Home</a>
+    <button class="toggle" onclick="toggleTheme()">🌗 Theme</button>
+  </div>
+</div>
+
+<h1 class="heading">Daily Class Routine</h1>
+<p class="sub">Updated Weekly Routine for Students</p>
+
+<div class="wrapper">
+
+  <!-- ROUTINE TABLE -->
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>9:00 - 10:00</th>
+          <th>10:00 - 11:00</th>
+          <th>11:30 - 12:30</th>
+          <th>1:30 - 2:30</th>
+          <th>2:30 - 3:30</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>Maths</td>
+          <td>C Programming</td>
+          <td>BEE</td>
+          <td>Lab</td>
+          <td>English</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>Physics</td>
+          <td>Maths</td>
+          <td>Workshop</td>
+          <td>Lab</td>
+          <td>Library</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>C Programming</td>
+          <td>BEE</td>
+          <td>Maths</td>
+          <td>Lab</td>
+          <td>Sports</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>Maths</td>
+          <td>Physics</td>
+          <td>C Programming</td>
+          <td>Lab</td>
+          <td>Project</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>BEE</td>
+          <td>Maths</td>
+          <td>English</td>
+          <td>Lab</td>
+          <td>Revision</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DOWNLOAD SECTION -->
+  <div class="download-card">
+    <h3>📥 Download Full Routine (PDF)</h3>
+    <p>You can download the complete class schedule in PDF format.</p>
+    
+    <!-- Replace FILE_ID with your Drive PDF -->
+    <a class="download-btn"
+       href="https://drive.google.com/uc?export=download&id=YOUR_FILE_ID">
+       Download Routine PDF
+    </a>
+  </div>
+
+</div>
+
+<script>
+function toggleTheme(){
+  document.body.classList.toggle("light");
+}
+</script>
+
+</body>
+</html>
