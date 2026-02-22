@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Notes - Sonal Notes Hub</title>
+<title>Notes - Sonal Study Hub</title>
 
 <style>
 :root{
@@ -11,31 +11,15 @@
   --card:#111827;
   --text:#e5e7eb;
   --accent:#3b82f6;
-  --accent2:#22c55e;
   --glass: rgba(255,255,255,0.05);
   --border: rgba(255,255,255,0.08);
 }
 
-/* LIGHT MODE */
-body.light{
-  --bg:#f4f7fb;
-  --card:#ffffff;
-  --text:#111827;
-  --glass: rgba(0,0,0,0.04);
-  --border: rgba(0,0,0,0.08);
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: "Segoe UI", sans-serif;
-}
-
 body{
+  margin:0;
+  font-family:"Segoe UI",sans-serif;
   background:var(--bg);
   color:var(--text);
-  transition:0.3s ease;
 }
 
 /* HEADER */
@@ -43,210 +27,247 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:16px 25px;
+  padding:18px 25px;
   background:var(--glass);
-  backdrop-filter: blur(10px);
   border-bottom:1px solid var(--border);
 }
 
 .title{
   font-size:22px;
-  font-weight:700;
+  font-weight:bold;
   color:#60a5fa;
 }
 
-/* BUTTONS TOP */
-.top-actions{
-  display:flex;
-  gap:10px;
-}
-
 .back{
-  padding:8px 16px;
-  background:var(--accent);
+  padding:8px 18px;
+  background:#3b82f6;
   color:white;
   text-decoration:none;
   border-radius:20px;
   font-weight:600;
-  font-size:14px;
 }
 
-.toggle{
-  padding:8px 16px;
-  border:none;
-  border-radius:20px;
-  background:linear-gradient(135deg,#3b82f6,#22c55e);
-  color:white;
-  font-weight:600;
-  cursor:pointer;
-}
-
-/* PAGE HEADING */
-.page-heading{
-  text-align:center;
-  font-size:28px;
-  margin:30px 15px 10px;
-  color:#60a5fa;
-}
-
-/* MAIN CONTAINER */
-.wrapper{
+/* SUBJECT SECTION */
+.subject-section{
   max-width:1300px;
-  margin:auto;
-  padding:20px;
+  margin:40px auto;
+  padding:0 20px;
 }
 
-/* RESPONSIVE GRID */
-.container{
+.subject-heading{
+  font-size:26px;
+  margin:30px 0 20px;
+  color:#60a5fa;
+  border-left:5px solid #3b82f6;
+  padding-left:12px;
+}
+
+/* GRID */
+.notes-grid{
   display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap:24px;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
 }
 
-/* LARGE TABLET */
-@media (max-width: 1200px){
-  .container{
-    grid-template-columns: repeat(3, 1fr);
-  }
+@media(max-width:1000px){
+  .notes-grid{grid-template-columns:repeat(2,1fr);}
 }
 
-/* TABLET */
-@media (max-width: 900px){
-  .container{
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media(max-width:500px){
+  .notes-grid{grid-template-columns:1fr;}
 }
 
-/* MOBILE */
-@media (max-width: 500px){
-  .container{
-    grid-template-columns: repeat(1, 1fr);
-    gap:18px;
-  }
-
-  .page-heading{
-    font-size:22px;
-  }
-}
-
-/* NOTE CARD */
-.note-box{
-  background:var(--glass);
-  border:1px solid var(--border);
+/* CARD */
+.note-card{
+  background:var(--card);
   border-radius:18px;
-  padding:14px;
-  transition:0.3s ease;
-  backdrop-filter: blur(8px);
+  padding:15px;
+  border:1px solid var(--border);
+  transition:0.3s;
 }
 
-.note-box:hover{
+.note-card:hover{
   transform:translateY(-6px);
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-/* IMAGE */
 .note-img{
   width:100%;
-  height:180px;
-  object-fit:cover;
+  height:170px;
   border-radius:12px;
+  object-fit:cover;
 }
 
-/* TITLE */
 .note-title{
-  margin:12px 0 10px;
+  margin:12px 0;
   font-size:16px;
   font-weight:600;
-  color:#60a5fa;
+  color:#93c5fd;
 }
 
-/* BUTTON GROUP */
+/* BUTTONS */
 .btn-group{
   display:flex;
   gap:10px;
 }
 
-/* BUTTON STYLE */
 .btn{
   flex:1;
   text-align:center;
   padding:9px;
   border-radius:20px;
   text-decoration:none;
-  font-weight:600;
-  font-size:14px;
   color:white;
+  font-size:14px;
+  font-weight:600;
 }
 
-.preview{
-  background:#22c55e;
-}
-
-.download{
-  background:#3b82f6;
-}
-
-.btn:hover{
-  opacity:0.9;
-}
+.preview{background:#22c55e;}
+.download{background:#3b82f6;}
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
 <div class="header">
-  <div class="title">📚 Sonal Notes Hub</div>
-  <div class="top-actions">
-    <a href="index.html" class="back">⬅ Home</a>
-    <button class="toggle" onclick="toggleTheme()">🌗 Theme</button>
-  </div>
+  <div class="title">📚 Sonal Study Hub - Notes</div>
+  <a href="index.html" class="back">⬅ Home</a>
 </div>
 
-<h2 class="page-heading">All Notes (Preview + Direct Download)</h2>
+<!-- 💻 COMPUTER NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">💻 Computer & HTML/CSS Notes</div>
+  <div class="notes-grid">
 
-<div class="wrapper">
-  <div class="container">
-
-    <!-- NOTE 1 -->
-    <div class="note-box">
-      <img src="images/notes-cover.jpg" class="note-img" alt="Notes">
-      <div class="note-title">My Study Notes (PDF)</div>
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">Computer Handwritten Notes (Full PDF)</div>
       <div class="btn-group">
-        <a class="btn preview"
-           href="https://drive.google.com/file/d/1mH_EAsGD_cI0gz2yK1t06IAiqhvgEBV2/preview"
-           target="_blank">👀 Preview</a>
-
-        <a class="btn download"
-           href="https://drive.google.com/uc?export=download&id=1mH_EAsGD_cI0gz2yK1t06IAiqhvgEBV2">
-           📥 Download
-        </a>
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
       </div>
     </div>
 
-    <!-- NOTE 2 -->
-    <div class="note-box">
-      <img src="images/notes2.jpg" class="note-img" alt="Notes">
-      <div class="note-title">Second Notes PDF</div>
+    <div class="note-card">
+      <img src="images/notes2.jpg" class="note-img">
+      <div class="note-title">HTML & CSS Handwritten Notes</div>
       <div class="btn-group">
-        <a class="btn preview"
-           href="https://drive.google.com/file/d/1mH_EAsGD_cI0gz2yK1t06IAiqhvgEBV2/preview"
-           target="_blank">👀 Preview</a>
-
-        <a class="btn download"
-           href="https://drive.google.com/uc?export=download&id=1mH_EAsGD_cI0gz2yK1t06IAiqhvgEBV2">
-           📥 Download
-        </a>
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
       </div>
     </div>
 
   </div>
-</div>
+</section>
 
-<script>
-function toggleTheme(){
-  document.body.classList.toggle("light");
-}
-</script>
+<!-- ➗ MATHS NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">➗ Maths Notes (All Units PDF)</div>
+  <div class="notes-grid">
 
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">Engineering Maths Full Unit Notes</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ⚡ BEE NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">⚡ BEE Notes</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ⚡ BEE NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">⚡ BEE Notes</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- ⚡ BEE NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">⚡ BEE Notes</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- ⚡ BEE NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">⚡ BEE Notes</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section><!-- ⚡ BEE NOTES -->
+<section class="subject-section">
+  <div class="subject-heading">Applied Chemistry</div>
+  <div class="notes-grid">
+
+    <div class="note-card">
+      <img src="images/notes-cover.jpg" class="note-img">
+      <div class="note-title">Applied Chemistry Unit-1</div>
+      <div class="btn-group">
+        <a class="btn preview" 
+        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" 
+        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 </body>
 </html>
