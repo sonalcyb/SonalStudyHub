@@ -62,19 +62,25 @@ body{
   padding-left:12px;
 }
 
-/* GRID */
+/* PERFECT GRID (6 Units Friendly) */
 .notes-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(3,1fr); /* Desktop: 3 per row */
   gap:25px;
 }
 
+/* Tablet */
 @media(max-width:1000px){
-  .notes-grid{grid-template-columns:repeat(2,1fr);}
+  .notes-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
+/* Mobile */
 @media(max-width:500px){
-  .notes-grid{grid-template-columns:1fr;}
+  .notes-grid{
+    grid-template-columns:1fr;
+  }
 }
 
 /* CARD */
@@ -83,7 +89,7 @@ body{
   border-radius:18px;
   padding:15px;
   border:1px solid var(--border);
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
 .note-card:hover{
@@ -128,146 +134,304 @@ body{
 </head>
 <body>
 
+<!-- HEADER -->
 <div class="header">
-  <div class="title">📚 Sonal Study Hub - Notes</div>
+  <div class="title">📚 Study Hub  Notes-II Sem</div>
   <a href="index.html" class="back">⬅ Home</a>
 </div>
 
-<!-- 💻 COMPUTER NOTES -->
+<!-- 🧪 APPLIED CHEMISTRY -->
 <section class="subject-section">
-  <div class="subject-heading">💻 Computer & HTML/CSS Notes</div>
+  <div class="subject-heading">Diploma-II Sem Applied Chemistry (Unit 1–5)</div>
   <div class="notes-grid">
 
+    <!-- Unit 1 -->
     <div class="note-card">
-      <img src="images/notes-cover.jpg" class="note-img">
-      <div class="note-title">Computer Handwritten Notes (Full PDF)</div>
+      <img src="chemistry.jpg" class="note-img">
+      <div class="note-title">Unit 1 - Chemistry PDF</div>
       <div class="btn-group">
-        <a class="btn preview" 
-        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
-        <a class="btn download" 
-        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+        <a class="btn preview" href="https://drive.google.com/file/d/1H_6LjEq4o4yk1OFVxyUfB586vi3-7XPS/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1H_6LjEq4o4yk1OFVxyUfB586vi3-7XPS">📥 Download</a>
       </div>
     </div>
 
+    <!-- Unit 2 -->
     <div class="note-card">
-      <img src="images/notes2.jpg" class="note-img">
-      <div class="note-title">HTML & CSS Handwritten Notes</div>
+      <img src="chemistry.jpg" class="note-img">
+      <div class="note-title">Unit 2 - Chemistry PDF</div>
       <div class="btn-group">
-        <a class="btn preview" 
-        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
-        <a class="btn download" 
-        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+        <a class="btn preview" href="https://drive.google.com/file/d/1RpPCeSgSesL_QfUEo5oUk_vVkjCcbTYt/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1RpPCeSgSesL_QfUEo5oUk_vVkjCcbTYt">📥 Download</a>
       </div>
     </div>
 
+    <!-- Unit 3 -->
+    <div class="note-card">
+      <img src="chemistry.jpg" class="note-img">
+      <div class="note-title">Unit 3 - Chemistry PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 4 -->
+    <div class="note-card">
+      <img src="chemistry.jpg" class="note-img">
+      <div class="note-title">Unit 4 - Chemistry PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 5 -->
+    <div class="note-card">
+      <img src="chemistry.jpg" class="note-img">
+      <div class="note-title">Unit 5 - Chemistry PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
   </div>
 </section>
-
-<!-- ➗ MATHS NOTES -->
+<!-- Engineering Mechanics -->
 <section class="subject-section">
-  <div class="subject-heading">➗ Maths Notes (All Units PDF)</div>
+  <div class="subject-heading">Diploma-II Sem Engineering Mechanics (Unit 1–5)</div>
   <div class="notes-grid">
 
+    <!-- Unit 1 -->
     <div class="note-card">
-      <img src="images/notes-cover.jpg" class="note-img">
-      <div class="note-title">Engineering Maths Full Unit Notes</div>
+      <img src="mechanics.jpg" class="note-img">
+      <div class="note-title">Unit 1 - Engineering Mechanics PDF</div>
       <div class="btn-group">
-        <a class="btn preview" 
-        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
-        <a class="btn download" 
-        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+        <a class="btn preview" href="https://drive.google.com/file/d/14cc6vBHe1f0TcSFDm5NGHjvKYSMmynK_/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=14cc6vBHe1f0TcSFDm5NGHjvKYSMmynK_">📥 Download</a>
       </div>
     </div>
 
+    <!-- Unit 2 -->
+    <div class="note-card">
+      <img src="mechanics.jpg" class="note-img">
+      <div class="note-title">Unit 2 - Engineering Mechanics PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="https://drive.google.com/file/d/1xOQ31sftdNZAqG3RhA3O3sAUwa_QX3GL/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1xOQ31sftdNZAqG3RhA3O3sAUwa_QX3GL">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 3 -->
+    <div class="note-card">
+      <img src="mechanics.jpg" class="note-img">
+      <div class="note-title">Unit 3 - Engineering Mechanics PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 4 -->
+    <div class="note-card">
+      <img src="mechanics.jpg" class="note-img">
+      <div class="note-title">Unit 4 - Engineering Mechanics PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 5 -->
+    <div class="note-card">
+      <img src="mechanics.jpg" class="note-img">
+      <div class="note-title">Unit 5 - Engineering Mechanics PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
   </div>
 </section>
-
-<!-- ⚡ BEE NOTES -->
+<!-- Basic Electrical -->
 <section class="subject-section">
-  <div class="subject-heading">⚡ BEE Notes</div>
+  <div class="subject-heading">Diploma-II Sem Basic Electrical Engineering (Unit 1–5)</div>
   <div class="notes-grid">
 
+    <!-- Unit 1 -->
     <div class="note-card">
-      <img src="images/notes-cover.jpg" class="note-img">
-      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <img src="electrical.jpg" class="note-img">
+      <div class="note-title">Unit 1 - Basic Electrical PDF</div>
       <div class="btn-group">
-        <a class="btn preview" 
-        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
-        <a class="btn download" 
-        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+        <a class="btn preview" href="https://drive.google.com/file/d/12wo8YGPZIwMZiEwJEc-CE1o8AfWIjXCI/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=12wo8YGPZIwMZiEwJEc-CE1o8AfWIjXCI">📥 Download</a>
       </div>
     </div>
 
+    <!-- Unit 2 -->
+    <div class="note-card">
+      <img src="electrical.jpg" class="note-img">
+      <div class="note-title">Unit 2 - Basic Electrical PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="https://drive.google.com/file/d/1R8Neu4-LAKZpsh6y1rj2eYJwrrSyzrue/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1R8Neu4-LAKZpsh6y1rj2eYJwrrSyzrue">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 3 -->
+    <div class="note-card">
+      <img src="electrical.jpg" class="note-img">
+      <div class="note-title">Unit 3 - Basic Electrical PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 4 -->
+    <div class="note-card">
+      <img src="electrical.jpg" class="note-img">
+      <div class="note-title">Unit 4 - Basic Electrical PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 5 -->
+    <div class="note-card">
+      <img src=" electrical.jpg" class="note-img">
+      <div class="note-title">Unit 5 - Basic Electrical PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
   </div>
 </section>
-<!-- ⚡ BEE NOTES -->
+<!--  APPLIED MATHEMATICS -->
 <section class="subject-section">
-  <div class="subject-heading">⚡ BEE Notes</div>
+  <div class="subject-heading">Diploma-II Sem Applied Mathematics-II (Unit 1–5)</div>
   <div class="notes-grid">
 
+    <!-- Unit 1 -->
     <div class="note-card">
-      <img src="images/notes-cover.jpg" class="note-img">
-      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <img src="mathematics.jpg" class="note-img">
+      <div class="note-title">Unit 1 - Applied Mathematics PDF</div>
       <div class="btn-group">
-        <a class="btn preview" 
-        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
-        <a class="btn download" 
-        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+        <a class="btn preview" href="https://drive.google.com/file/d/1H_6LjEq4o4yk1OFVxyUfB586vi3-7XPS/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1H_6LjEq4o4yk1OFVxyUfB586vi3-7XPS">📥 Download</a>
       </div>
     </div>
 
-  </div>
-</section><!-- ⚡ BEE NOTES -->
-<section class="subject-section">
-  <div class="subject-heading">⚡ BEE Notes</div>
-  <div class="notes-grid">
-
+    <!-- Unit 2 -->
     <div class="note-card">
-      <img src="images/notes-cover.jpg" class="note-img">
-      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <img src="mathematics.jpg" class="note-img">
+      <div class="note-title">Unit 2 - Applied Mathematics PDF</div>
       <div class="btn-group">
-        <a class="btn preview" 
-        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
-        <a class="btn download" 
-        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+        <a class="btn preview" href="https://drive.google.com/file/d/1RpPCeSgSesL_QfUEo5oUk_vVkjCcbTYt/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1RpPCeSgSesL_QfUEo5oUk_vVkjCcbTYt">📥 Download</a>
       </div>
     </div>
 
-  </div>
-</section><!-- ⚡ BEE NOTES -->
-<section class="subject-section">
-  <div class="subject-heading">⚡ BEE Notes</div>
-  <div class="notes-grid">
-
+    <!-- Unit 3 -->
     <div class="note-card">
-      <img src="images/notes-cover.jpg" class="note-img">
-      <div class="note-title">BEE Handwritten Notes PDF</div>
+      <img src="mathematics.jpg" class="note-img">
+      <div class="note-title">Unit 3 - Applied Mathematics PDF</div>
       <div class="btn-group">
-        <a class="btn preview" 
-        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
-        <a class="btn download" 
-        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
       </div>
     </div>
 
-  </div>
-</section><!-- ⚡ BEE NOTES -->
-<section class="subject-section">
-  <div class="subject-heading">Applied Chemistry</div>
-  <div class="notes-grid">
-
+    <!-- Unit 4 -->
     <div class="note-card">
-      <img src="images/notes-cover.jpg" class="note-img">
-      <div class="note-title">Applied Chemistry Unit-1</div>
+      <img src="mathematics.jpg" class="note-img">
+      <div class="note-title">Unit 4 - Applied Mathematics PDF</div>
       <div class="btn-group">
-        <a class="btn preview" 
-        href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
-        <a class="btn download" 
-        href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
       </div>
     </div>
 
+    <!-- Unit 5 -->
+    <div class="note-card">
+      <img src="mathematics.jpg" class="note-img">
+      <div class="note-title">Unit 5 - Applied Mathematics PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
   </div>
 </section>
-</body>
-</html>
+<!--Enviromental Science -->
+<section class="subject-section">
+  <div class="subject-heading">Diploma-II Sem Environmental Science (Unit 1–5)</div>
+  <div class="notes-grid">
+
+    <!-- Unit 1 -->
+    <div class="note-card">
+      <img src="enviromental.jpg" class="note-img">
+      <div class="note-title">Unit 1 - Environmental Science PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="https://drive.google.com/file/d/11weJTh8JiYZzo6p0AdZ3ZnduGmL1j_iO/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=11weJTh8JiYZzo6p0AdZ3ZnduGmL1j_iO">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 2 -->
+    <div class="note-card">
+      <img src="enviromental.jpg" class="note-img">
+      <div class="note-title">Unit 2 - Environmental Science PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="https://drive.google.com/file/d/1h9LVxMjigxCYklpuMT7fL1jAhqYe836v/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1h9LVxMjigxCYklpuMT7fL1jAhqYe836v">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 3 -->
+    <div class="note-card">
+      <img src="enviromental.jpg" class="note-img">
+      <div class="note-title">Unit 3 - Environmental Science PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 4 -->
+    <div class="note-card">
+      <img src="enviromental.jpg" class="note-img">
+      <div class="note-title">Unit 4 - Environmental Science PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
+
+    <!-- Unit 5 -->
+    <div class="note-card">
+      <img src="enviromental.jpg" class="note-img">
+      <div class="note-title">Unit 5 - Environmental Science PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="#">👀 Preview</a>
+        <a class="btn download" href="#">📥 Download</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- English -->
+<section class="subject-section">
+  <div class="subject-heading">Diploma-II Sem English & Communication-II (Unit 1)</div>
+  <div class="notes-grid">
+
+    <!-- Unit 1 -->
+    <div class="note-card">
+      <img src="english.jpg" class="note-img">
+      <div class="note-title">Unit 1 - English PDF</div>
+      <div class="btn-group">
+        <a class="btn preview" href="https://drive.google.com/file/d/1H_6LjEq4o4yk1OFVxyUfB586vi3-7XPS/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1H_6LjEq4o4yk1OFVxyUfB586vi3-7XPS">📥 Download</a>
+      </div>
+    </div>
+</section>
