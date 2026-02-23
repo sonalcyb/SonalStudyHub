@@ -180,6 +180,27 @@ nav a:hover{color:var(--accent);}
   nav{display:none;} 
   .categories{grid-template-columns:1fr;} 
 }
+/* ===== MINIMAL SINGLE LINE FOOTER ===== */
+.minimal-footer{
+  text-align:center;
+  font-size:12.5px;
+  color:#94a3b8;
+  padding:12px 0 18px;
+  margin-top:25px;
+  border-top:1px solid rgba(255,255,255,0.06);
+  letter-spacing:0.3px;
+}
+
+.minimal-footer a{
+  color:#94a3b8;
+  text-decoration:none;
+  margin:0 5px;
+  transition:0.2s ease;
+}
+
+.minimal-footer a:hover{
+  color:#60a5fa;
+}
 </style>
 </head>
 
@@ -306,11 +327,12 @@ setTimeout(()=>{
   document.getElementById('updatePopup').style.display='none';
 },5000);
 </script>
-<footer>
-  © 2026 Sonal Study Hub |
-  <a href="privacy.html">Privacy Policy</a> |
-  <a href="about.html">About</a> |
-  <a href="disclaimer.html">Disclaimer</a>
+<footer class="minimal-footer">
+  © 2026 Sonal  • 
+  <a href="privacy.html">Privacy</a> • 
+  <a href="about.html">About</a> • 
+  <a href="disclaimer.html">Disclaimer</a> • 
+  <a href="#">Telegram</a>
 </footer>
 </body>
 </html>
