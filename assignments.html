@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Assignments - Sonal Study Hub</title>
+<title>Notes - Sonal Study Hub</title>
 
 <style>
 :root{
@@ -15,23 +15,9 @@
   --border: rgba(255,255,255,0.08);
 }
 
-/* LIGHT MODE */
-body.light{
-  --bg:#f4f7fb;
-  --card:#ffffff;
-  --text:#111827;
-  --glass: rgba(0,0,0,0.04);
-  --border: rgba(0,0,0,0.08);
-}
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Segoe UI",sans-serif;
-}
-
 body{
+  margin:0;
+  font-family:"Segoe UI",sans-serif;
   background:var(--bg);
   color:var(--text);
 }
@@ -48,82 +34,77 @@ body{
 
 .title{
   font-size:22px;
-  font-weight:700;
+  font-weight:bold;
   color:#60a5fa;
 }
 
-.actions{
-  display:flex;
-  gap:10px;
-}
-
-.btn-top{
-  padding:8px 16px;
-  border-radius:20px;
-  border:none;
-  font-weight:600;
-  cursor:pointer;
-  text-decoration:none;
+.back{
+  padding:8px 18px;
+  background:#3b82f6;
   color:white;
-  background:linear-gradient(135deg,#3b82f6,#22c55e);
+  text-decoration:none;
+  border-radius:20px;
+  font-weight:600;
 }
 
 /* SUBJECT SECTION */
-.section{
+.subject-section{
   max-width:1300px;
   margin:40px auto;
   padding:0 20px;
 }
 
-.section-title{
+.subject-heading{
   font-size:26px;
-  margin-bottom:20px;
+  margin:30px 0 20px;
   color:#60a5fa;
   border-left:5px solid #3b82f6;
   padding-left:12px;
 }
 
-/* GRID */
-.grid{
+/* PERFECT GRID (6 Units Friendly) */
+.notes-grid{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:24px;
+  grid-template-columns:repeat(3,1fr); /* Desktop: 3 per row */
+  gap:25px;
 }
 
-@media(max-width:1100px){
-  .grid{grid-template-columns:repeat(3,1fr);}
+/* Tablet */
+@media(max-width:1000px){
+  .notes-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
 }
 
-@media(max-width:800px){
-  .grid{grid-template-columns:repeat(2,1fr);}
-}
-
+/* Mobile */
 @media(max-width:500px){
-  .grid{grid-template-columns:1fr;}
+  .notes-grid{
+    grid-template-columns:1fr;
+  }
 }
 
 /* CARD */
-.card{
+.note-card{
   background:var(--card);
   border-radius:18px;
   padding:15px;
   border:1px solid var(--border);
-  transition:0.3s;
+  transition:0.3s ease;
 }
 
-.card:hover{
+.note-card:hover{
   transform:translateY(-6px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.4);
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
 }
 
-.card img{
+.note-img{
   width:100%;
   height:170px;
-  object-fit:cover;
   border-radius:12px;
+  object-fit:cover;
 }
 
-.card-title{
+.note-title{
   margin:12px 0;
   font-size:16px;
   font-weight:600;
@@ -139,7 +120,7 @@ body{
 .btn{
   flex:1;
   text-align:center;
-  padding:10px;
+  padding:9px;
   border-radius:20px;
   text-decoration:none;
   color:white;
@@ -155,69 +136,81 @@ body{
 
 <!-- HEADER -->
 <div class="header">
-  <div class="title">📝 Assignments - Sonal Study Hub</div>
-  <div class="actions">
-    <a href="index.html" class="btn-top">⬅ Home</a>
-    <button class="btn-top" onclick="toggleTheme()">🌗 Theme</button>
-  </div>
+  <div class="title">Assignments-II Sem</div>
+  <a href="index.html" class="back">⬅ Home</a>
 </div>
 
-<!-- 💻 COMPUTER ASSIGNMENTS -->
-<div class="section">
-  <div class="section-title">💻 Computer Assignments</div>
-  <div class="grid">
+<!-- Assignments 1 -->
+<section class="subject-section">
+  <div class="subject-heading">Diploma-II Sem  Assignments-1</div>
+  <div class="notes-grid">
 
-    <div class="card">
-      <img src="images/assignment.jpg" alt="Assignment">
-      <div class="card-title">Computer Assignment 1 (PDF)</div>
+    <!-- Unit 1 -->
+    <div class="note-card">
+      <img src="chemistry.jpg" class="note-img">
+      <div class="note-title">Applied Chemistry Assignment-1</div>
       <div class="btn-group">
-        <a class="btn preview" href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
-        <a class="btn download" href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+        <a class="btn preview" href="https://drive.google.com/file/d/1eGlboy_BlbZeGEz0p_44DyvP_PXXUWys/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1eGlboy_BlbZeGEz0p_44DyvP_PXXUWys">📥 Download</a>
+      </div>
+    </div>
+<div class="note-card">
+      <img src="mathematics.jpg" class="note-img">
+      <div class="note-title">Applied Mathematics Assignment-1</div>
+      <div class="btn-group">
+        <a class="btn preview" href="https://drive.google.com/file/d/1RDeJ7cOlIekyfJwE4h3G2Qfb-HNmsUp8/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1RDeJ7cOlIekyfJwE4h3G2Qfb-HNmsUp8">📥 Download</a>
+      </div>
+    </div>
+<div class="note-card">
+      <img src="electrical.jpg" class="note-img">
+      <div class="note-title">Basic Electrical Assignment-1</div>
+      <div class="btn-group">
+        <a class="btn preview" href="https://drive.google.com/file/d/1t0qyzVSAWu-7tiu69LlFzaTvpXqELCqn/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1t0qyzVSAWu-7tiu69LlFzaTvpXqELCqn">📥 Download</a>
+      </div>
+    </div>
+<div class="note-card">
+      <img src="mechanics.jpg" class="note-img">
+      <div class="note-title">Engineering Mechanics Assignment-1</div>
+      <div class="btn-group">
+        <a class="btn preview" href="https://drive.google.com/file/d/1W67rdIP2Q3uF_b9u9uMVR5Ic32zBkN6i/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1W67rdIP2Q3uF_b9u9uMVR5Ic32zBkN6i">📥 Download</a>
+      </div>
+    </div>
+<div class="note-card">
+      <img src="english.jpg" class="note-img">
+      <div class="note-title">English Assignment-1</div>
+      <div class="btn-group">
+        <a class="btn preview" href="https://drive.google.com/file/d/1otZ2mijM1RcZ7afSjWKAJC8C9u6ovfFM/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1otZ2mijM1RcZ7afSjWKAJC8C9u6ovfFM">📥 Download</a>
       </div>
     </div>
 
-  </div>
-</div>
-
-<!-- ➗ MATHS ASSIGNMENTS -->
-<div class="section">
-  <div class="section-title">➗ Maths Assignments</div>
-  <div class="grid">
-
-    <div class="card">
-      <img src="images/assignment.jpg" alt="Assignment">
-      <div class="card-title">Maths Assignment (Full PDF)</div>
+    <!-- Unit 2 -->
+    <div class="note-card">
+      <img src="chemistry.jpg" class="note-img">
+      <div class="note-title">Environmental Science Assignment-1</div>
       <div class="btn-group">
-        <a class="btn preview" href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
-        <a class="btn download" href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+        <a class="btn preview" href="https://drive.google.com/file/d/1RpPCeSgSesL_QfUEo5oUk_vVkjCcbTYt/preview" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1RpPCeSgSesL_QfUEo5oUk_vVkjCcbTYt">📥 Download</a>
       </div>
     </div>
-
-  </div>
 </div>
+<!-- Assignments 2-->
+<section class="subject-section">
+  <div class="subject-heading">Diploma-II Sem  Assignments-2</div>
+  <div class="notes-grid">
 
-<!-- ⚡ BEE ASSIGNMENTS -->
-<div class="section">
-  <div class="section-title">⚡ BEE Assignments</div>
-  <div class="grid">
-
-    <div class="card">
-      <img src="images/assignment.jpg" alt="Assignment">
-      <div class="card-title">BEE Assignment PDF</div>
+    <!-- Unit 1 -->
+    <div class="note-card">
+      <img src="chemistry.jpg" class="note-img">
+      <div class="note-title">Applied Chemistry Assignment-2</div>
       <div class="btn-group">
-        <a class="btn preview" href="https://drive.google.com/file/d/YOUR_ID/preview" target="_blank">👀 Preview</a>
-        <a class="btn download" href="https://drive.google.com/uc?export=download&id=YOUR_ID">📥 Download</a>
+        <a class="btn preview" href="https://drive.google.com/file/d/1PkLtZ4ssgnR9Rxj4Ysim0702RfUvTp3C/view?usp=sharing" target="_blank">👀 Preview</a>
+        <a class="btn download" href="https://drive.google.com/uc?export=download&id=1PkLtZ4ssgnR9Rxj4Ysim0702RfUvTp3C">📥 Download</a>
       </div>
     </div>
-
-  </div>
+    </div>
 </div>
-
-<script>
-function toggleTheme(){
-  document.body.classList.toggle("light");
-}
-</script>
-
-</body>
-</html>
+</section>    
